@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
@@ -14,6 +15,8 @@ function App() {
       </div>
       <div className="col-span-4">
         <Main />
+        <Outlet />
+
       </div>
     </div>
   );
