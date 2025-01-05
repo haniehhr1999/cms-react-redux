@@ -9,7 +9,7 @@ const Courses = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getCourseFromServer("https://dummyjson.com/users"));
+    dispatch(getCourseFromServer("https://dummyjson.com/api/courses"));
   }, []);
 
 
