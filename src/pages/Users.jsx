@@ -12,7 +12,7 @@ const Users = () => {
   }, []);
 
   return (
-    <div className="bg-slate-600 rounded-md p-5">
+    <div className="bg-[#ececec] rounded-md p-5">
       {/* <div className="grid grid-cols-2 gap-4 p-5">
         <input
           className="py-1 px-2 focus:outline-none focus:bg-blue-200 rounded-sm"
@@ -53,7 +53,7 @@ const Users = () => {
         />
       </div> */}
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-4 pb-4">
         <div className="col-span-3">
           <input
             className="w-full rounded-sm py-1 px-2"
@@ -62,7 +62,7 @@ const Users = () => {
           />
         </div>
         <div className="col-span-1">
-          <button className="bg-slate-600 text-white rounded">حذف کاربر</button>
+          <button className="bg-red-600 text-white rounded px-3 py-1 w-full">حذف کاربر</button>
         </div>
       </div>
 
@@ -72,6 +72,7 @@ const Users = () => {
           firstname={user.firstName}
           lastname={user.lastName}
           email={user.email}
+          image={user.image}
         />
       ))}
     </div>
