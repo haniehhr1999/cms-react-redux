@@ -8,7 +8,10 @@ const Navbar = () => {
         <div>توسعه دهنده فرانت اند</div>
       </div>
 
-      <div>
+      <div className="flex">
+      <i className="bg-slate-300 p-2 rounded-full fa fa-sun-o" aria-hidden="true"></i>
+      <i className="bg-slate-300 p-2 mx-2 rounded-full fa fa-bell" aria-hidden="true"></i>
+
         <button className="bg-sky-700 text-white text-center rounded-sm py-1 px-3 flex items-center">
           <i class="fa fa-sign-out" aria-hidden="true"></i>
           <span className="mx-2">خروج از پنل</span>

@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CourseBox from "../components/CourseBox";
+import { useDispatch, useSelector } from "react-redux";
+import { getCourseFromServer } from "../redux/courses";
 
 const Courses = () => {
+
+  const courses = useSelector((state) => state.courses);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCourseFromServer("https://dummyjson.com/users"));
+  }, []);
+
+
   return (
-    <div>
-      <CourseBox />
+    <div className="flex flex-col justify-between h-screen">
+      {
+        courses.map(course => <CourseBox key={course.id} />)
+      }
+      
       <div className="flex justify-between">
         <button className="bg-lime-600 text-white">افزودن دسته بندی</button>
         <div className="flex">
